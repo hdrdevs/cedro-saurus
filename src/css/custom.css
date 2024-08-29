@@ -13,7 +13,7 @@
     --background-site-darkest: lightgray;
     --background-site-lighter: #ff0000;
     --background-site-light: #12b112;
-    --ifm-color-primary: #fadda8;
+    --ifm-color-primary: #fdeed1;
     --ifm-color-primary-dark: #21af90;
     --ifm-color-primary-darker: #1fa588;
     --ifm-color-primary-darkest: #1a8870;
@@ -26,12 +26,12 @@
     --markdown-title: #1f1c1a;
     --markdown-text: rgb(22, 13, 8);
     --markdown-link: rgb(184, 124, 12);
-    --code-title: #473a33;
-    --code-title-text: white;
-    --code-src: rgb(253, 241, 214);
+    --code-title: rgba(247, 243, 237, 0.5);
+    --code-title-text: rgb(0, 0, 0);
+    --code-src: #fffdfb;
     --footer-links: #35312d;
-    --footer-background: rgb(216, 204, 194);
-    --table-header: rgb(216, 204, 194);
+    --footer-background: rgba(247, 243, 237, 0.5);
+    --table-header: rgba(247, 243, 237, 0.5);
     --table-row: white;
 }
 

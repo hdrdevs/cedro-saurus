@@ -125,8 +125,8 @@ const config: Config = {
             copyright: `Copyright © ${new Date().getFullYear()} cedro.hdrdevs.com.ar`,
         },
         prism: {
-            theme: prismThemes.github,
-            darkTheme: prismThemes.dracula,
+            theme: prismThemes.gruvboxMaterialLight,
+            darkTheme: prismThemes.gruvboxMaterialDark,
         },
     } satisfies Preset.ThemeConfig,
 };

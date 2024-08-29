@@ -1,25 +1,36 @@
 ---
 slug: welcome
-title: Welcome
+title: Cedro 0.1.x Release Announcement
 authors: [hdr]
-tags: [facebook, hello, docusaurus]
+tags: [release, announcement, cedro]
 ---
 
-[Docusaurus blogging features](https://docusaurus.io/docs/blog) are powered by the [blog plugin](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog).
+We are thrilled to announce the official release of the first version of **Cedro**, an innovative JavaScript library written in TypeScript, designed to simplify the creation of complex user interfaces. Cedro is widget-based, offering a straightforward and efficient way to build modern applications.
 
-Simply add Markdown files (or folders) to the `blog` directory.
+## What is Cedro?
 
-Regular blog authors can be added to `authors.yml`.
+Cedro is a library that enables developers to create user interfaces using elements known as widgets. These widgets form the core of Cedro, offering an intuitive API and an object-oriented structure. With Cedro, developers can choose from a wide range of widgets, customize them as needed, or even create new widgets for specific situations.
 
-The blog post date can be extracted from filenames, such as:
+## Why Choose Cedro?
 
--   `2019-05-30-welcome.md`
--   `2019-05-30-welcome/index.md`
+-   **Ease of Use**: Cedro is designed with simplicity and efficiency in mind. Its API is easy to learn, and its clear documentation allows developers to quickly start building complex interfaces.
 
-A blog post folder can be convenient to co-locate blog post images:
+-   **Flexibility**: Whether you’re creating a simple interface or an application with multiple interactive components, Cedro provides the flexibility to do so.
 
-![Docusaurus Plushie](./docusaurus-plushie-banner.jpeg)
+-   **Based on TypeScript**: Cedro leverages the full power of TypeScript, offering a safer and more efficient development environment with full support for static types, code autocompletion, and refactoring tools.
 
-The blog supports tags as well!
+## What to Expect
 
-**And if you don't want a blog**: just delete this directory, and use `blog: false` in your Docusaurus config.
+With this first release of Cedro, we are laying a solid foundation upon which we plan to build and expand in future updates. Key features include:
+
+-   A wide variety of ready-to-use widgets.
+-   Full support for TypeScript.
+-   An object-oriented structure that facilitates extension and customization.
+
+We hope you enjoy using Cedro as much as we enjoyed creating it! We invite you to download the library, explore the documentation, and start building amazing user interfaces.
+
+Stay tuned to our blog for future updates and news about Cedro. This is just the beginning!
+
+---
+
+**Want to learn how to use Cedro?** Head over to our [Docs section](../docs/intro) to get started with detailed guides and examples.

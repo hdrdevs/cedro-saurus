@@ -236,11 +236,15 @@ tr {
 
 .card {
     background-color: var(--background-site-dark) !important;
-    border-color: var(--background-site-darkest) !important;
+    border-color: var(--background-site-dark) !important;
 }
 
 .card h2 {
     color: var(--markdown-link) !important;
+}
+
+.card p {
+    color: var(--markdown-title) !important;
 }
 
 rect {

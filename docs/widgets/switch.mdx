@@ -1,0 +1,50 @@
+---
+sidebar_position: 1
+---
+
+import InheritsFromWidget from "@site/src/components/inherits";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# Switch
+
+A Switch widget is a user interface component that allows users to select one option from a set. Represented by a small switch, it can be checked or unchecked and generally has an associated text label.
+
+```mermaid
+graph TD;
+    Widget-->ToggleButton;
+    ToggleButton-->Switch;
+```
+
+## Properties
+
+<InheritsFromWidget name="Switch" fromName="ToggleButton" />
+
+## Constructor
+
+| Parameter | Type   | Required | Description                                       |
+| :-------- | :----- | :------- | :------------------------------------------------ |
+| id        | string | yes      | The **id** of the widget                          |
+| text      | string | yes      | The **label** of the widget                       |
+| parent    | Widget | no       | The **parent** of the widget. Default is **null** |
+
+<Tabs>
+    <TabItem value="a"  label="TS Example" default >
+        ```ts title="src/main.ts"
+        import { Switch } from "cedro/src/ui";
+
+        const switch: Switch = new Switch("my-switch", "option 1");
+
+        switch.setState(true);
+        ```
+    </TabItem>
+
+    <TabItem value="b" label="TSX Example">
+        ```tsx title="src/main.tsx"
+        import { WSwitch } from "cedro/src/ui";
+
+        <WSwitch id="my-switch" text="option 1" checked />
+        ```
+    </TabItem>
+
+</Tabs>

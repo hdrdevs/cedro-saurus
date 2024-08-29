@@ -1,0 +1,110 @@
+---
+sidebar_position: 1
+---
+
+import InheritsFromWidget from "@site/src/components/inherits";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# VPanel
+
+The VPanel is a dynamic container widget designed to hold two child widgets aligned vertically. Featuring an adjustable splitter between the widgets, HPanel allows users to resize the width of the child widgets effortlessly.
+
+## Key Features
+
+-   **Vertical Alignment:** Holds two child widgets in a vertical layout.
+
+-   **Resizable Splitter:** Includes a handle between the widgets for easy vertical resizing, allowing dynamic adjustment of widget widths.
+
+Implement the HPanel in your project for a responsive and user-friendly layout that enhances the flexibility and functionality of your application's design.
+
+```mermaid
+graph TD;
+    Widget-->VPanel;
+```
+
+## Properties
+
+<InheritsFromWidget name="VPanel" />
+
+-   `topContent: Widget` → The top child widget.
+-   `bottomContent: Widget` → The bottom child widget.
+-   `topHeight: number` → The top widget size.
+-   `bottomHeight: number` → The bottom widget size.
+
+## Constructor
+
+| Parameter | Type   | Required | Description                                       |
+| :-------- | :----- | :------- | :------------------------------------------------ |
+| id        | string | yes      | The **id** of the widget                          |
+| parent    | Widget | no       | The **parent** of the widget. Default is **null** |
+
+<Tabs>
+    <TabItem value="a"  label="TS Example" default >
+        ```ts title="src/main.ts"
+        import { VPanel } from "cedro/src/ui";
+
+        const myPanel: VPanel = new VPanel("my-panel");
+
+        myPanel.setTop(contentWidget1, 200);
+        myPanel.setBotttom(contenWidget2);
+
+        ```
+    </TabItem>
+
+    <TabItem value="b" label="TSX Example">
+        ```tsx title="src/main.tsx"
+        import { WVPanel } from "cedro/src/ui";
+
+        <WHPanel id="my-panel">
+            <ContentWidget1 fixedSize={200} />
+            <ContentWidget2 />
+        </WHPanel>
+        ```
+    </TabItem>
+
+</Tabs>
+
+## Public Methods
+
+### setTop
+
+Set the top child widget.
+
+**Parameters**
+
+| Parameter | Type   | Required | Description                                    |
+| :-------- | :----- | :------- | :--------------------------------------------- |
+| widget    | Widget | yes      | The top child widget.                          |
+| fixHeight | number | no       | The top child widget size. Default is **null** |
+
+**Returns Value**
+
+    void
+
+**Example**
+
+```ts title="src/main.ts"
+myPanel.setTop(contentWidget1, 200);
+```
+
+### setBottom
+
+Set the bottom child widget.
+
+**Parameters**
+
+| Parameter | Type   | Required | Description                                       |
+| :-------- | :----- | :------- | :------------------------------------------------ |
+| widget    | Widget | yes      | The bottom child widget.                          |
+| fixHeight | number | no       | The bottom child widget size. Default is **null** |
+
+**Returns Value**
+
+    void
+
+**Example**
+
+```ts title="src/main.ts"
+myPanel.setBottom(contentWidget2);
+```

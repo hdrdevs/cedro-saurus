@@ -1,0 +1,110 @@
+---
+sidebar_position: 1
+---
+
+import InheritsFromWidget from "@site/src/components/inherits";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# HPanel
+
+The HPanel is a dynamic container widget designed to hold two child widgets aligned horizontally. Featuring an adjustable splitter between the widgets, HPanel allows users to resize the width of the child widgets effortlessly.
+
+## Key Features
+
+-   **Horizontal Alignment:** Holds two child widgets in a horizontal layout.
+
+-   **Resizable Splitter:** Includes a handle between the widgets for easy horizontal resizing, allowing dynamic adjustment of widget widths.
+
+Implement the HPanel in your project for a responsive and user-friendly layout that enhances the flexibility and functionality of your application's design.
+
+```mermaid
+graph TD;
+    Widget-->HPanel;
+```
+
+## Properties
+
+<InheritsFromWidget name="HPanel" />
+
+-   `leftContent: Widget` → The left child widget.
+-   `rightContent: Widget` → The right child widget.
+-   `leftWidth: number` → The left widget size.
+-   `rightWidth: number` → The right widget size.
+
+## Constructor
+
+| Parameter | Type   | Required | Description                                       |
+| :-------- | :----- | :------- | :------------------------------------------------ |
+| id        | string | yes      | The **id** of the widget                          |
+| parent    | Widget | no       | The **parent** of the widget. Default is **null** |
+
+<Tabs>
+    <TabItem value="a"  label="TS Example" default >
+        ```ts title="src/main.ts"
+        import { HPanel } from "cedro/src/ui";
+
+        const myPanel: HPanel = new HPanel("my-panel");
+
+        myPanel.setLeft(contentWidget1, 200);
+        myPanel.setRight(contenWidget2);
+
+        ```
+    </TabItem>
+
+    <TabItem value="b" label="TSX Example">
+        ```tsx title="src/main.tsx"
+        import { WHPanel } from "cedro/src/ui";
+
+        <WHPanel id="my-panel">
+            <ContentWidget1 fixedSize={200} />
+            <ContentWidget2 />
+        </WHPanel>
+        ```
+    </TabItem>
+
+</Tabs>
+
+## Public Methods
+
+### setLeft
+
+Set the left child widget.
+
+**Parameters**
+
+| Parameter | Type   | Required | Description                                     |
+| :-------- | :----- | :------- | :---------------------------------------------- |
+| widget    | Widget | yes      | The left child widget.                          |
+| fixWidth  | number | no       | The left child widget size. Default is **null** |
+
+**Returns Value**
+
+    void
+
+**Example**
+
+```ts title="src/main.ts"
+myPanel.setLeft(contentWidget1, 200);
+```
+
+### setRight
+
+Set the right child widget.
+
+**Parameters**
+
+| Parameter | Type   | Required | Description                                      |
+| :-------- | :----- | :------- | :----------------------------------------------- |
+| widget    | Widget | yes      | The right child widget.                          |
+| fixWidth  | number | no       | The right child widget size. Default is **null** |
+
+**Returns Value**
+
+    void
+
+**Example**
+
+```ts title="src/main.ts"
+myPanel.setRight(contentWidget2);
+```

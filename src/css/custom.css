@@ -1,0 +1,247 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+    --logo-text-color: #67a336;
+    --logo-subtitle-color: #7a4d1d;
+    --background-site: white;
+    --background-site-dark: white;
+    --background-site-darkest: lightgray;
+    --background-site-lighter: #ff0000;
+    --background-site-light: #12b112;
+    --ifm-color-primary: #fadda8;
+    --ifm-color-primary-dark: #21af90;
+    --ifm-color-primary-darker: #1fa588;
+    --ifm-color-primary-darkest: #1a8870;
+    --ifm-color-primary-light: #29d5b0;
+    --ifm-color-primary-lighter: #32d8b4;
+    --ifm-color-primary-lightest: #4fddbf;
+    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+    --btn-background-color: #ea891a;
+    --btn-background-color-light: #e2b474;
+    --markdown-title: #1f1c1a;
+    --markdown-text: rgb(22, 13, 8);
+    --markdown-link: rgb(184, 124, 12);
+    --code-title: #473a33;
+    --code-title-text: white;
+    --code-src: rgb(253, 241, 214);
+    --footer-links: #35312d;
+    --footer-background: rgb(216, 204, 194);
+    --table-header: rgb(216, 204, 194);
+    --table-row: white;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme="dark"] {
+    --logo-text-color: #74be39;
+    --logo-subtitle-color: #f8bb7a;
+    --background-site: #655349;
+    --background-site-dark: #56473e;
+    --background-site-darkest: #473a33;
+    --background-site-lighter: #8393a2;
+    --background-site-light: #99a4b0;
+    --ifm-color-primary: #473a33;
+    --ifm-color-primary-dark: #21af90;
+    --ifm-color-primary-darker: #1fa588;
+    --ifm-color-primary-darkest: #1a8870;
+    --ifm-color-primary-light: #29d5b0;
+    --ifm-color-primary-lighter: #32d8b4;
+    --ifm-color-primary-lightest: #4fddbf;
+    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+    --btn-background-color: #ea891a;
+    --btn-background-color-light: #e2b474;
+    --markdown-title: #f5dba0;
+    --markdown-text: white;
+    --markdown-link: orange;
+    --code-title: #473a33;
+    --code-title-text: white;
+    --code-src: #56473e;
+    --footer-links: white;
+    --footer-background: #655349;
+    --table-header: #56473e;
+    --table-row: #473a33;
+}
+
+body,
+html {
+    background-color: var(--background-site);
+}
+
+.navbar {
+    background-color: var(--background-site) !important;
+}
+
+.navbar__title,
+.navbar__logo {
+    color: var(--logo-text-color) !important;
+}
+
+.navbar__link:hover {
+    color: var(--logo-subtitle-color) !important; /* Ejemplo de un color rojo */
+}
+
+.navbar__link--active {
+    color: var(--logo-subtitle-color) !important; /* Ejemplo de un color rojo */
+}
+
+.theme-doc-sidebar-container {
+    background-color: var(--background-site-dark); /* Cambia este color al que desees */
+}
+
+.menu__link--active {
+    color: var(--logo-subtitle-color) !important; /* Ejemplo de un color rojo */
+}
+
+.table-of-contents__link--active {
+    color: var(--markdown-link);
+    font-weight: bold;
+}
+
+.breadcrumbs__link {
+    color: var(--markdown-link);
+    background-color: var(--background-site-dark);
+}
+
+.breadcrumbs__link:hover {
+    background-color: var(--background-site-dark);
+    color: var(--markdown-link);
+}
+
+.breadcrumbs__item--active span {
+    color: var(--markdown-text) !important;
+}
+
+.footer {
+    background-color: var(--footer-background) !important;
+}
+
+.footer a {
+    color: var(--footer-links) !important;
+}
+
+.footer__title {
+    color: var(--markdown-link) !important;
+}
+
+.footer__copyright {
+    color: var(--markdown-link) !important;
+    font-weight: bold;
+}
+
+.hero__title {
+    color: var(--logo-text-color);
+}
+
+.hero__subtitle {
+    color: var(--logo-subtitle-color);
+}
+
+.button--primary {
+    background-color: var(--btn-background-color) !important;
+    border-color: var(
+        --btn-background-color
+    ) !important; /* Si quieres cambiar también el color del borde */
+}
+
+.button--primary:hover {
+    background-color: var(--btn-background-color-light) !important;
+    border-color: var(--btn-background-color-light) !important;
+}
+
+.markdown h1 {
+    color: var(--markdown-title) !important;
+}
+
+.markdown h2 {
+    color: var(--markdown-title) !important;
+}
+
+.markdown h3 {
+    color: var(--markdown-title) !important;
+}
+
+.markdown li {
+    color: var(--logo-subtitle-color);
+}
+
+.markdown a {
+    color: var(--markdown-link);
+}
+
+.markdown p {
+    color: var(--markdown-text);
+}
+
+.markdown table,
+th,
+td,
+tr {
+    border-color: var(--background-site-dark) !important;
+}
+
+.markdown th {
+    background-color: var(--table-header) !important;
+}
+
+.markdown td {
+    background-color: var(--table-row) !important;
+}
+
+.doc-toc {
+    color: green;
+}
+
+.markdown code {
+    background-color: var(--code-src); /* Cambia el fondo del bloque de código */
+    border-radius: 0;
+}
+
+.language-md,
+.language-mdx,
+.language-tsx,
+.language-ts,
+.language-bash,
+.language-jsx,
+.language-js {
+    background-color: var(--code-title) !important;
+    color: var(--code-title-text) !important;
+}
+
+.docMainContainer {
+    background-color: purple;
+}
+
+.pagination-nav__link {
+    background-color: var(--background-site-dark) !important;
+    border-color: var(--background-site-darkest);
+}
+
+.pagination-nav__label {
+    color: var(--markdown-link);
+}
+
+.card {
+    background-color: var(--background-site-dark) !important;
+    border-color: var(--background-site-darkest) !important;
+}
+
+.card h2 {
+    color: var(--markdown-link) !important;
+}
+
+rect {
+    fill: var(--background-site-dark) !important;
+    stroke: var(--background-site-darkest) !important;
+}
+
+.nodeLabel {
+    color: var(--markdown-link) !important;
+}
+/*
+.tabs__item[aria-selected="true"] {
+    background-color: var(--background-site-dark) !important;
+}*/

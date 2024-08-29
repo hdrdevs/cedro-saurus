@@ -1,0 +1,50 @@
+---
+sidebar_position: 1
+---
+
+import InheritsFromWidget from "@site/src/components/inherits";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# RadioButton
+
+A RadioButton widget is a user interface component that allows users to select one option from a set. Represented by a small circle, it can be checked or unchecked and generally has an associated text label.
+
+```mermaid
+graph TD;
+    Widget-->ToggleButton;
+    ToggleButton-->RadioButton;
+```
+
+## Properties
+
+<InheritsFromWidget name="RadioButton" fromName="ToggleButton" />
+
+## Constructor
+
+| Parameter | Type   | Required | Description                                       |
+| :-------- | :----- | :------- | :------------------------------------------------ |
+| id        | string | yes      | The **id** of the widget                          |
+| text      | string | yes      | The **label** of the widget                       |
+| parent    | Widget | no       | The **parent** of the widget. Default is **null** |
+
+<Tabs>
+    <TabItem value="a"  label="TS Example" default >
+        ```ts title="src/main.ts"
+        import { RadioButton } from "cedro/src/ui";
+
+        const radio: RadioButton = new RadioButton("my-radio", "option 1");
+
+        radio.setState(true);
+        ```
+    </TabItem>
+
+    <TabItem value="b" label="TSX Example">
+        ```tsx title="src/main.tsx"
+        import { WRadioButton } from "cedro/src/ui";
+
+        <WRadioButton id="my-radio" text="option 1" checked />
+        ```
+    </TabItem>
+
+</Tabs>

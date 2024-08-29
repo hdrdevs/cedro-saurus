@@ -33,4 +33,4 @@ Stay tuned to our blog for future updates and news about Cedro. This is just the
 
 ---
 
-**Want to learn how to use Cedro?** Head over to our [Docs section](../docs/intro) to get started with detailed guides and examples.
+**Want to learn how to use Cedro?** Head over to our [Docs section](../../docs/intro) to get started with detailed guides and examples.

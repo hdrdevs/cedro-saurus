@@ -103,8 +103,8 @@ const config: Config = {
                         },
 
                         {
-                            label: "Youtube",
-                            href: "https://youtube.com/cedrojs",
+                            label: "npm",
+                            href: "https://npmjs.com/cedro",
                         },
                     ],
                 },

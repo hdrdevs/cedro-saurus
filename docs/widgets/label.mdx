@@ -34,7 +34,7 @@ graph TD;
 <Tabs>
     <TabItem value="a"  label="TS Example" default >
         ```ts title="src/main.ts"
-        import { Label } from "cedro/src/ui";
+        import { Label } from "@cedro/ui";
 
         const myLabel: Label = new Label("my-label", "h1", parentWidget);
         myLabel.setText("Hello world!");
@@ -42,7 +42,7 @@ graph TD;
     </TabItem>
     <TabItem value="b" label="TSX Example">
         ```tsx title="src/main.tsx"
-        import { WLabel } from "cedro/src/ui";
+        import { WLabel } from "@cedro/ui";
 
         <WLabel id="my-widget" variant="h1" text="Hello World!" />;
         ```

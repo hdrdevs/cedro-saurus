@@ -16,7 +16,7 @@ Here is a minimal example:
 
 ```tsx title="src/main.tsx"
 import { createApplication, Application, Widgets } from "cedro/src/";
-import { WLabel } from "cedro/src/ui";
+import { WLabel } from "@cedro/ui";
 
 window.app = (() => {
     return createApplication(
@@ -33,7 +33,7 @@ and here is the same example using the class typing model:
 
 ```ts title="src/main.ts"
 import { Application, WidgetTypes, WidgetAlignTypes } from "cedro/src/";
-import { Label } from "cedro/src/ui";
+import { Label } from "@cedro/ui";
 
 class HelloWordApp extends Application {
     msg: Label;

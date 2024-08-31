@@ -2,6 +2,7 @@
 sidebar_position: 1
 ---
 
+import Example from "@site/src/components/example";
 import InheritsFromWidget from "@site/src/components/inherits";
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
@@ -56,6 +57,105 @@ graph TD;
         }
 
         <WButton id="my-button" variant="contained" text="Click me!" onClick={handleClick} />;
+        ```
+    </TabItem>
+
+</Tabs>
+
+### Text buttons
+
+Text buttons are versatile and can be used to perform actions in various contexts. They are ideal for serving as headers in a grid, interactive elements in a menu, and more. Their simple yet effective design makes them a flexible option for enhancing usability and navigation in your user interface.
+
+<Example url="text-buttons" height={50} />
+
+<Tabs>
+    <TabItem value="b" label="TSX Example">
+        ```tsx title="src/main.tsx"
+import "./style.css";
+
+import { WButton } from "@cedro/ui/button.ui";
+import { WContainer, WSpacer } from "@cedro/ui/container.ui";
+import { createWidget } from "@cedro/ui/widget.builder";
+
+export default createWidget(
+    <WContainer orientation="vertical">
+        <WSpacer />
+        <WContainer orientation="horizontal" fixedSize={45} padding={5}>
+            <WSpacer />
+            <WButton text="PRIMARY" variant="text" color="primary" />
+            <WButton text="ERROR" variant="text" color="error" />
+            <WButton text="SUCCESS" variant="text" color="success" />
+            <WSpacer />
+        </WContainer>
+        <WSpacer />
+    </WContainer>
+);
+        ```
+    </TabItem>
+
+</Tabs>
+
+### Contained buttons
+
+Contained buttons are designed to emphasize important actions within the interface. They are fully filled and typically have strong contrast with the background, making them highly visible. They are ideal for primary actions, such as submitting forms or confirming decisions, as their solid design draws the user’s attention and reinforces their significance.
+
+<Example url="contained-buttons" height={50} />
+
+<Tabs>
+    <TabItem value="b" label="TSX Example">
+        ```tsx title="src/main.tsx"
+import "./style.css";
+
+import { WButton } from "@cedro/ui/button.ui";
+import { WContainer, WSpacer } from "@cedro/ui/container.ui";
+import { createWidget } from "@cedro/ui/widget.builder";
+
+export default createWidget(
+    <WContainer orientation="vertical">
+        <WSpacer />
+        <WContainer orientation="horizontal" fixedSize={45} padding={5}>
+            <WSpacer />
+            <WButton text="PRIMARY" variant="contained" color="primary" />
+            <WButton text="ERROR" variant="contained" color="error" />
+            <WButton text="SUCCESS" variant="contained" color="success" />
+            <WSpacer />
+        </WContainer>
+        <WSpacer />
+    </WContainer>
+);
+        ```
+    </TabItem>
+
+</Tabs>
+
+### Outlined buttons
+
+Outlined buttons have a sleek and minimalist design, with a border that defines their shape without a full fill. They are perfect for secondary or complementary actions, as they maintain a more understated profile compared to contained buttons. This style is ideal when you want to highlight an action without making it too prominent, preserving visual balance in the interface.
+
+<Example url="outlined-buttons" height={50} />
+
+<Tabs>
+    <TabItem value="b" label="TSX Example">
+        ```tsx title="src/main.tsx"
+import "./style.css";
+
+import { WButton } from "@cedro/ui/button.ui";
+import { WContainer, WSpacer } from "@cedro/ui/container.ui";
+import { createWidget } from "@cedro/ui/widget.builder";
+
+export default createWidget(
+    <WContainer orientation="vertical">
+        <WSpacer />
+        <WContainer orientation="horizontal" fixedSize={45} padding={5}>
+            <WSpacer />
+            <WButton text="PRIMARY" variant="outlined" color="primary" />
+            <WButton text="ERROR" variant="outlined" color="error" />
+            <WButton text="SUCCESS" variant="outlined" color="success" />
+            <WSpacer />
+        </WContainer>
+        <WSpacer />
+    </WContainer>
+);
         ```
     </TabItem>
 

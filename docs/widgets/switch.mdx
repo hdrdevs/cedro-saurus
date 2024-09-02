@@ -2,6 +2,7 @@
 sidebar_position: 1
 ---
 
+import Example from "@site/src/components/example";
 import InheritsFromWidget from "@site/src/components/inherits";
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
@@ -15,6 +16,45 @@ graph TD;
     Widget-->ToggleButton;
     ToggleButton-->Switch;
 ```
+
+<Example url="switches" height={50} />
+
+<Tabs>
+    <TabItem value="a"  label="TS Example"  >
+        ```ts title="src/main.ts"
+        import { Checkbox } from "@cedro/ui";
+
+        const chk: Checkbox = new Checkbox("my-chk", "option 1");
+
+        chk.setState(true);
+        ```
+    </TabItem>
+
+    <TabItem value="b" label="TSX Example" default>
+        ```tsx title="src/main.tsx"
+
+import { WSwitch } from "@cedro/ui/switch.ui";
+import { WContainer, WSpacer } from "@cedro/ui/container.ui";
+import { createWidget } from "@cedro/ui/widget.builder";
+
+export default createWidget(
+    <WContainer orientation="vertical">
+        <WSpacer />
+        <WContainer orientation="horizontal" fixedSize={45} padding={5}>
+            <WSpacer />
+            <WSwitch text="Switch One" checked />
+            <WSwitch text="Switch Two" />
+            <WSwitch text="Switch Three" />
+            <WSpacer />
+        </WContainer>
+        <WSpacer />
+    </WContainer>
+);
+
+````
+</TabItem>
+
+</Tabs>
 
 ## Properties
 
@@ -48,3 +88,4 @@ graph TD;
     </TabItem>
 
 </Tabs>
+````

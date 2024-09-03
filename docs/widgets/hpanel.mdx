@@ -2,6 +2,7 @@
 sidebar_position: 1
 ---
 
+import Example from "@site/src/components/example";
 import InheritsFromWidget from "@site/src/components/inherits";
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
@@ -9,6 +10,34 @@ import TabItem from "@theme/TabItem";
 # HPanel
 
 The HPanel is a dynamic container widget designed to hold two child widgets aligned horizontally. Featuring an adjustable splitter between the widgets, HPanel allows users to resize the width of the child widgets effortlessly.
+
+<Example url="hpanels" height={300} />
+
+<Tabs>
+
+    <TabItem value="b" label="TSX Example" default>
+        ```tsx title="src/main.tsx"
+
+import { WLabel } from "@cedro/ui/label.ui";
+import { WHPanel } from "@cedro/ui/hpanel.ui";
+import { WContainer } from "@cedro/ui/container.ui";
+import { createWidget } from "@cedro/ui/widget.builder";
+
+export default createWidget(
+    <WHPanel padding={5}>
+        <WContainer variant="contained" fixedSize={250}>
+            <WLabel text="Left Widget" centerX centerY />
+        </WContainer>
+        <WContainer variant="contained">
+            <WLabel text="Right Widget" centerX centerY />
+        </WContainer>
+    </WHPanel>
+);
+
+````
+</TabItem>
+
+</Tabs>
 
 ## Key Features
 
@@ -108,3 +137,4 @@ Set the right child widget.
 ```ts title="src/main.ts"
 myPanel.setRight(contentWidget2);
 ```
+````
